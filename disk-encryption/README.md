@@ -36,7 +36,7 @@ dnf module disable virt -y
 cat > /etc/yum.repos.d/CentOS-Virt.repo << EOF
 [Advanced_Virt]
 name=CentOS-$releasever - Advanced Virt 
-baseurl=http://mirror.centos.org/centos/$releasever/virt/x86_64/advanced-virtualization/
+baseurl=http://mirror.centos.org/centos/\$releasever/virt/x86_64/advanced-virtualization/
 gpgcheck=0
 enabled=1
 EOF
