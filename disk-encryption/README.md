@@ -242,7 +242,7 @@ openshift-install create manifests --dir=/root/ocp4
 Here are examples of those two files: 
 
 ```
-cat << EOF > /root/ocp4/manifests/99_openshift-worker-vtpm.yaml
+cat << EOF > /root/ocp4/manifests/99_openshift-worker-tpmv2-encryption.yaml
 apiVersion: machineconfiguration.openshift.io/v1
 kind: MachineConfig
 metadata:
@@ -265,7 +265,7 @@ spec:
         path: /etc/clevis.json
 EOF
 
-cat << EOF > /root/ocp4/manifests/99_openshift-master-vtpm.yaml
+cat << EOF > /root/ocp4/manifests/99_openshift-master-tpmv2-encryption.yaml
 apiVersion: machineconfiguration.openshift.io/v1
 kind: MachineConfig
 metadata:
